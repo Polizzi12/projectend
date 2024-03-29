@@ -1,8 +1,27 @@
 import Row from "react-bootstrap/Row"; 
 import Col from "react-bootstrap/Col"; 
- 
+import React, { useState, useEffect  } from 'react';
  
 const Main = function () { 
+    const [searchSongs, setSearchSongs] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=SferaEbbasta"; 
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('Errore nella ricerca delle canzoni');
+        }
+        const data = await response.json();
+        setSearchSongs(data.data.slice(0, 8) || []);
+      } catch (error) {
+        console.error('Errore durante il recupero dei dati:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return ( 
     <Col xs={12} md={9} className="offset-md-3 mainPage"> 
       <Row> 
@@ -33,8 +52,13 @@ const Main = function () {
               xl={{ cols: 4 }} 
               className="imgLinks py-3" 
               id="rockSection" 
+              style={{ marginLeft: "-5px", marginRight: "-5px"}}
             > 
-              
+               {searchSongs.map((result, index) => (
+                <Col key={index} >
+                  <img src={result.album.cover_medium} alt={result.album.title} className="modi"/>
+                </Col>
+              ))}
             </Row> 
           </div> 
         </Col> 
@@ -50,8 +74,13 @@ const Main = function () {
               xl={{ cols: 4 }} 
               className="imgLinks py-3" 
               id="popSection" 
+              style={{ marginLeft: "-5px", marginRight: "-5px" }}
             > 
-               
+               {searchSongs.map((result, index) => (
+                <Col key={index} >
+                  <img src={result.album.cover_medium} alt={result.album.title} className="modi" />
+                </Col>
+                ))}
             </Row> 
           </div> 
         </Col> 
@@ -59,7 +88,7 @@ const Main = function () {
       <Row> 
         <Col xs={10}> 
           <div id="hiphop"> 
-            <h2>#HipHop</h2> 
+            <h2>HipHop</h2> 
             <Row 
               xs={{ cols: 1 }} 
               sm={{ cols: 2 }} 
@@ -67,8 +96,13 @@ const Main = function () {
               xl={{ cols: 4 }} 
               className="imgLinks py-3" 
               id="hipHopSection" 
+              style={{ marginLeft: "-5px", marginRight: "-5px" }}
             > 
-               
+               {searchSongs.map((result, index) => (
+                <Col key={index} >
+                  <img src={result.album.cover_medium} alt={result.album.title} className="modi"/>
+                </Col>
+                ))}
             </Row> 
           </div> 
         </Col> 

@@ -89,7 +89,9 @@ ul {
   color: rgb(145, 145, 145);
   text-decoration: none;
 }
-
+.ml:hover{
+color:white;
+}
 .nav-link i {
   font-size: 1.5em;
 }
@@ -172,8 +174,7 @@ ul {
 /*MAIN PAGE SECTION*/
 
 .mainLinks {
-  margin-top:30px;
-  
+  padding-top:30px;
   justify-content: space-evenly;
 }
 
@@ -214,4 +215,16 @@ ul {
 
 .mainPage img {
   width: 200px;
+}
+
+.modi{
+  border-radius:10px;
+  margin:0px;
+  transition: transform 0.3s ease;
+  padding-block: 5px;
+  
+}
+
+.modi:hover{
+  transform:scale(1.2)
 }

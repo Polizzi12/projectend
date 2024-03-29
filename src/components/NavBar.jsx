@@ -13,7 +13,7 @@ const NavBar = function () {
     <Col xs={2}> 
       <Navbar expand="md" className="justify-content-between fixed-left" id="sidebar"> 
         <Container className="flex-column align-items-start"> 
-          <Navbar.Brand href="index.html"> 
+          <Navbar.Brand > 
             <Image src={Logo} alt="Spotify Logo" width="131" height="40" /> 
           </Navbar.Brand> 
           <Button 
@@ -29,11 +29,11 @@ const NavBar = function () {
           </Button> 
           <Navbar.Collapse id="navbarNavAltMarkup"> 
             <Nav className="flex-column"> 
-              <Nav.Link className="d-flex align-items-center" href="#Home"> 
+              <Nav.Link className="d-flex align-items-center" href="#"> 
                 <HouseDoorFill className="fs-5" /> 
                 &nbsp; Home 
               </Nav.Link> 
-              <Nav.Link className="d-flex align-items-center" href="#Library"> 
+              <Nav.Link className="d-flex align-items-center" href="#"> 
                 <BookFill className="fs-5" /> 
                 &nbsp; Your Library 
               </Nav.Link> 
@@ -64,7 +64,7 @@ const NavBar = function () {
             Login 
           </Button> 
           <br /> 
-          <a href="#cookie">Cookie Policy</a> |<a href="#privacy"> Privacy</a> 
+          <a href="#" className="ml">Cookie Policy</a> |<a href="#" className="ml"> Privacy</a> 
         </div> 
       </Navbar> 
     </Col> 
