@@ -7,14 +7,14 @@ import { HouseDoorFill, BookFill } from "react-bootstrap-icons";
 import Form from "react-bootstrap/Form"; 
 import InputGroup from "react-bootstrap/InputGroup"; 
 import Image from "react-bootstrap/Image"; 
- 
+ import Logo from "../assets/logo/logo.png"
 const NavBar = function () { 
   return ( 
     <Col xs={2}> 
       <Navbar expand="md" className="justify-content-between fixed-left" id="sidebar"> 
         <Container className="flex-column align-items-start"> 
           <Navbar.Brand href="index.html"> 
-            <Image src="assets/logo/logo.png" alt="Spotify Logo" width="131" height="40" /> 
+            <Image src={Logo} alt="Spotify Logo" width="131" height="40" /> 
           </Navbar.Brand> 
           <Button 
             className="navbar-toggler" 

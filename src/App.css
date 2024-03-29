@@ -172,7 +172,8 @@ ul {
 /*MAIN PAGE SECTION*/
 
 .mainLinks {
-  margin-top: 1.5rem;
+  margin-top:30px;
+  
   justify-content: space-evenly;
 }
 

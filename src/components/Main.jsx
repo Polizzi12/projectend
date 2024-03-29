@@ -7,11 +7,11 @@ const Main = function () {
     <Col xs={12} md={9} className="offset-md-3 mainPage"> 
       <Row> 
         <Col sm={9} lg={11} className="mainLinks d-none d-md-flex"> 
-          <a href="#t">TRENDING</a> 
-          <a href="#p">PODCAST</a> 
-          <a href="#m">MOODS AND GENRES</a> 
-          <a href="#n">NEW RELEASES</a> 
-          <a href="#d">DISCOVER</a> 
+          <a href="#">TRENDING</a> 
+          <a href="#">PODCAST</a> 
+          <a href="#">MOODS AND GENRES</a> 
+          <a href="#">NEW RELEASES</a> 
+          <a href="#">DISCOVER</a> 
         </Col> 
       </Row> 
       <Row> 
